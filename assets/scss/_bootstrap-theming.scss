@@ -1,2 +1,6 @@
 @use 'presets' as *;
 @use 'mixins' as *;
+
+ul.nav.navbar-nav.navbar-right {
+  margin-right: 0;
+}
