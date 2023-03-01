@@ -1,22 +1,45 @@
 @use 'presets' as *;
 @use 'mixins' as *;
 
+.navbar-header {
+  text-align: center;
+}
 
 .navbar-inverse {
   background-color: $color-deep-dark;
 }
 
 
-.navbar-inverse .navbar-nav>li {
-  padding: 5px 5px 5px 0;
+.navbar-left {
+  margin-bottom: 0px;
+
+  >li {
+    @include sm-min {
+      padding: 5px 5px 5px 0;
+    }
+  }
 }
 
-.navbar-inverse .navbar-nav.navbar-right>li {
-  padding: 5px 0 5px 5px;
+.navbar-right {
+  margin-top: 0px;
+
+  >li {
+    @include sm-min {
+      padding: 5px 0 5px 5px;
+    }
+  }
 }
 
 .navbar-inverse .navbar-nav>li>a {
   transition: background-color 0.5s;
+
+  @include sm-min {
+    border-radius: 4px;
+  }
+
+  @include sm {
+    text-align: center;
+  }
 
   &:hover {
     color: $color-white;
@@ -27,10 +50,13 @@
 
 .navbar-inverse .navbar-nav>.active>a {
   background-color: $color-primary-dark;
-  border-radius: 4px;
 
   &:hover {
     background-color: $color-primary-light;
-    border-radius: 4px;
   }
+}
+
+.navbar-toggle {
+  float: none;
+  margin-right: 0;
 }

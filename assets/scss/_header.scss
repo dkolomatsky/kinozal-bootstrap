@@ -19,12 +19,20 @@
 
 .header-logo__title {
   font-family: $font-header;
-  font-size: 3.5rem;
   padding-left: 0.33em;
   letter-spacing: 0.33em;
   color: $color-accent;
   font-weight: 700;
-  @extend %text-decoration
+  @extend %text-decoration;
+
+  @include xs-min {
+    font-size: 3.5rem;
+  }
+
+  @include xs {
+    font-size: 2.5rem;
+  }
+
 }
 
 .header-logo__description {
