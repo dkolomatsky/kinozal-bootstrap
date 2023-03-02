@@ -60,3 +60,36 @@
   float: none;
   margin-right: 0;
 }
+
+.panel-info {
+  background-color: $color-gray-light;
+  border: 1px solid $color-gray;
+  box-shadow: none;
+
+  &:not(:last-of-type) {
+    margin-bottom: $gap * 2;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &>.panel-heading {
+    background-color: $color-accent;
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    font-weight: 400;
+    font-family: $font-main;
+    color: $color-white;
+  }
+
+}
+
+.panel-body {
+  border-radius: 0 0 4px 4px;
+}
+
+.input-group-lg>.form-control,
+.form-group-lg .form-control {
+  font-size: 0.875rem;
+}

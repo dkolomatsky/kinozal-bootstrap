@@ -1,3 +1,4 @@
+@charset 'UTF-8';
 .header-logo__title,
 .header-logo__description
 {
@@ -53,6 +54,44 @@
     float: none;
 
     margin-right: 0;
+}
+
+.panel-info
+{
+    border: 1px solid #d5d5d5;
+    background-color: #f4f4f4;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.panel-info:not(:last-of-type)
+{
+    margin-bottom: 30px;
+}
+.panel-info:last-of-type
+{
+    margin-bottom: 0;
+}
+.panel-info > .panel-heading
+{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+
+    letter-spacing: .08em;
+
+    color: #fff;
+    background-color: #df8a13;
+}
+
+.panel-body
+{
+    border-radius: 0 0 4px 4px;
+}
+
+.input-group-lg > .form-control,
+.form-group-lg .form-control
+{
+    font-size: .875rem;
 }
 
 html
@@ -120,27 +159,53 @@ a:focus
     color: #fff;
 }
 
-.panel
+.vertical-carousel
 {
-    margin-bottom: 30px;
+    overflow: hidden;
+
+    border-radius: 4px;
 }
-
-.panel-heading
-{
-    font-family: 'PT Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-
-    letter-spacing: 2px;
-
-    background-color: #df8a13 !important;
-}
-
-.carousel-image
+.vertical-carousel__image
 {
     width: 100%;
 }
 
+.site-user
+{
+    position: relative;
+}
+.site-user__tabs
+{
+    position: absolute;
+    top: 3px;
+    right: 9.99999999px;
+
+    border: none;
+}
+.site-user__tabs a
+{
+    padding: 10px 5px !important;
+
+    color: #d5d5d5;
+    border: none !important;
+    background-color: transparent !important;
+}
+.site-news-item
+{
+    height: 85px;
+    margin-bottom: 15px;
+}
+.site-news-item__thumbnail
+{
+    float: left;
+
+    width: 75px;
+    margin-right: 9.99999999px;
+}
+.site-news-item__image
+{
+    width: 100%;
+}
 @media (min-width: 576px)
 {
     .header-logo__title
@@ -148,7 +213,6 @@ a:focus
         font-size: 3.5rem;
     }
 }
-
 @media (min-width: 768px)
 {
     .navbar-left > li
@@ -164,7 +228,6 @@ a:focus
         border-radius: 4px;
     }
 }
-
 @media (max-width: 767.8px)
 {
     .navbar-inverse .navbar-nav > li > a
@@ -172,7 +235,6 @@ a:focus
         text-align: center;
     }
 }
-
 @media (max-width: 575.8px)
 {
     .header-logo__title

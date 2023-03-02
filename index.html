@@ -78,8 +78,8 @@
 
 
                   <div class="left-sidebar col-lg-3 col-lg-pull-9 col-md-4 col-md-pull-8">
-                        <div class="panel panel-default">
 
+                        <div class="vertical-carousel panel panel-info">
                               <div id="slide-carousel" class="carousel slide" data-ride="carousel">
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
@@ -91,19 +91,19 @@
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner" role="listbox">
                                           <div class="item active">
-                                                <img class="carousel-image" src="assets/img/films/1263242.jpg"
+                                                <img class="vertical-carousel__image" src="assets/img/films/1263242.jpg"
                                                       alt="slide">
                                                 <div class="carousel-caption">
                                                 </div>
                                           </div>
                                           <div class="item">
-                                                <img class="carousel-image" src="assets/img/films/1266931.jpg"
+                                                <img class="vertical-carousel__image" src="assets/img/films/1266931.jpg"
                                                       alt="slide">
                                                 <div class="carousel-caption">
                                                 </div>
                                           </div>
                                           <div class="item">
-                                                <img class="carousel-image" src="assets/img/films/1289488.jpg"
+                                                <img class="vertical-carousel__image" src="assets/img/films/1289488.jpg"
                                                       alt="slide">
                                                 <div class="carousel-caption">
                                                 </div>
@@ -125,43 +125,143 @@
                         </div>
 
 
-                        <div class="panel panel-primary">
+                        <div class="site-search panel panel-info">
                               <div class="panel-heading">Поиск</div>
                               <div class="panel-body">
-                                    <div class="input-group input-group-lg">
-                                          <input type="text" class="form-control" placeholder="Поиск по сайту">
-                                          <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">
-                                                      <span class="glyphicon glyphicon-search"
-                                                            aria-hidden="true"></span>
-                                                </button>
-                                          </span>
-                                    </div>
+                                    <form action="search">
+                                          <div class="input-group input-group-lg">
+                                                <input type="text" class="form-control" placeholder="Поиск по сайту">
+                                                <span class="input-group-btn">
+                                                      <button class="btn btn-default" type="button"><span
+                                                                  class="glyphicon glyphicon-search"
+                                                                  aria-hidden="true"></span></button>
+                                                </span>
+                                          </div>
+                                    </form>
                               </div>
                         </div>
 
-                        <div class="panel panel-primary">
-                              <div class="panel-heading">Пользователь</div>
+                        <div class="site-user panel panel-info">
+                              <div class="panel-heading">Пользователь
+                              </div>
                               <div class="panel-body">
-                                    <div class="input-group input-group-lg">
-                                          <input type="login" class="form-control" placeholder="Логин">
-                                          <input type="password" class="form-control" placeholder="Пароль">
+                                    <!-- Nav tabs -->
+                                    <ul class="site-user__tabs nav nav-tabs" role="tablist">
+                                          <li role="presentation" class="active"><a href="#user-login-sidebar"
+                                                      aria-controls="home" role="tab" data-toggle="tab"><span
+                                                            class="glyphicon glyphicon-log-in"></span></a>
+                                          </li>
+                                          <li role="presentation"><a href="#user-registration-sidebar"
+                                                      aria-controls="profile" role="tab" data-toggle="tab"><span
+                                                            class="glyphicon glyphicon-user"></span></a></li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="site-user__content tab-content">
+                                          <div role="tabpanel" class="tab-pane fade-in active" id="user-login-sidebar">
+                                                <form action="login">
+                                                      <div class="form-group form-group-lg">
+                                                            <input type="login" class="form-control"
+                                                                  placeholder="Логин">
+                                                      </div>
+                                                      <div class="form-group form-group-lg">
+                                                            <input type="password" class="form-control"
+                                                                  placeholder="Пароль">
+                                                      </div>
+                                                      <button type="submit"
+                                                            class="btn btn-default btn-lg btn-block">Вход</button>
+                                                </form>
+                                          </div>
+
+
+                                          <div role="tabpanel" class="tab-pane fade" id="user-registration-sidebar">
+                                                <form action="Registration">
+                                                      <div class="form-group form-group-lg">
+                                                            <input type="login" class="form-control"
+                                                                  placeholder="Логин">
+                                                      </div>
+                                                      <div class="form-group form-group-lg">
+                                                            <input type="password" class="form-control"
+                                                                  placeholder="Пароль">
+                                                      </div>
+                                                      <div class="form-group form-group-lg">
+                                                            <input type="email" class="form-control"
+                                                                  placeholder="Email">
+                                                      </div>
+                                                      <button type="submit"
+                                                            class="btn btn-default btn-lg btn-block">Регистрация</button>
+                                                </form>
+                                          </div>
                                     </div>
-                                    <button type="submit" class="btn btn-default btn-lg btn-block">Вход</button>
                               </div>
                         </div>
 
-                        <div class="panel panel-primary">
+                        <div class="site-news panel panel-info">
                               <div class="panel-heading">Новости сайта</div>
                               <div class="panel-body">
-                                    Panel content
+                                    <div class="site-news-item">
+                                          <div class="site-news-item__thumbnail thumbnail">
+                                                <img class="site-news-item__image" src="assets/img/75x75.png"
+                                                      alt="image">
+                                          </div>
+                                          <div class="site-news-item__title"><a class="site-news-item__link" href="">
+                                                      Мы запустили новый сервис - ...</a>
+                                          </div>
+                                          <div class="site-news__date">05 декабря 2016</div>
+                                    </div>
+                                    <div class="site-news-item">
+                                          <div class="site-news-item__thumbnail thumbnail">
+                                                <img class="site-news-item__image" src="assets/img/75x75.png"
+                                                      alt="image">
+                                          </div>
+                                          <div class="site-news-item__title"><a class="site-news-item__link" href="">
+                                                      Мы запустили новый сервис - ...</a>
+                                          </div>
+                                          <div class="site-news__date">05 декабря 2016</div>
+                                    </div>
+                                    <div class="site-news-item">
+                                          <div class="site-news-item__thumbnail thumbnail">
+                                                <img class="site-news-item__image" src="assets/img/75x75.png"
+                                                      alt="image">
+                                          </div>
+                                          <div class="site-news-item__title"><a class="site-news-item__link" href="">
+                                                      Мы запустили новый сервис - ...</a>
+                                          </div>
+                                          <div class="site-news__date">05 декабря 2016</div>
+                                    </div>
+                                    <div class="site-news-item">
+                                          <div class="site-news-item__thumbnail thumbnail">
+                                                <img class="site-news-item__image" src="assets/img/75x75.png"
+                                                      alt="image">
+                                          </div>
+                                          <div class="site-news-item__title"><a class="site-news-item__link" href="">
+                                                      Мы запустили новый сервис - ...</a>
+                                          </div>
+                                          <div class="site-news__date">05 декабря 2016</div>
+                                    </div>
+                                    <div class="site-news-item">
+                                          <div class="site-news-item__thumbnail thumbnail">
+                                                <img class="site-news-item__image" src="assets/img/75x75.png"
+                                                      alt="image">
+                                          </div>
+                                          <div class="site-news-item__title"><a class="site-news-item__link" href="">
+                                                      Мы запустили новый сервис - ...</a>
+                                          </div>
+                                          <div class="site-news__date">05 декабря 2016</div>
+                                    </div>
+
                               </div>
                         </div>
 
-                        <div class="panel panel-primary">
+                        <div class="site-rating panel panel-info">
                               <div class="panel-heading">Рейтинг фильмов</div>
-                              <div class="panel-body">
-                                    Panel content
+                              <div class="panel-body panel-rating">
+                                    <ul class="nav nav-pills" role="tablist">
+                                          <li class="nav-pills__item" role="presentation">
+                                                <a class="nav-pills__link" href="#">Messages
+                                                      <span class="badge">3</span></a>
+                                          </li>
+                                    </ul>
                               </div>
                         </div>
                   </div>

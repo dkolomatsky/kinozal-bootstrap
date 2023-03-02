@@ -1,18 +1,57 @@
 @use 'presets' as *;
 @use 'mixins' as *;
 
-.panel {
-  margin-bottom: 30px;
+
+.vertical-carousel {
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+  }
 }
 
-.panel-heading {
-  background-color: $color-accent !important;
-  font-size: 20px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  font-family: $font-main;
+.site-user {
+  position: relative;
+
+  &__tabs {
+    position: absolute;
+    top: 3px;
+    right: $gap-md;
+    border: none;
+    //margin-right: -$gap;
+
+    a {
+      background-color: transparent !important;
+      border: none !important;
+      color: $color-gray;
+      padding: 10px 5px !important;
+    }
+  }
 }
 
-.carousel-image {
-  width: 100%;
+/*локальные переменные*/
+$image-size: 75px;
+$image-size-with-padding: $image-size + 10px;
+
+.site-news-item {
+  height: $image-size-with-padding;
+  margin-bottom: $gap;
+
+  &__thumbnail {
+    float: left;
+    margin-right: $gap-md;
+    width: $image-size;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {}
+
+  &__link {}
+
+  &__date {}
+
 }
