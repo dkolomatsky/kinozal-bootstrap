@@ -1,2 +1,18 @@
 @use 'presets' as *;
 @use 'mixins' as *;
+
+.panel {
+  margin-bottom: 30px;
+}
+
+.panel-heading {
+  background-color: $color-accent !important;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: $font-main;
+}
+
+.carousel-image {
+  width: 100%;
+}
