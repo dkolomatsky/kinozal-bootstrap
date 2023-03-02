@@ -206,6 +206,18 @@ a:focus
 {
     width: 100%;
 }
+.site-news-item__title
+{
+    margin-bottom: 9.99999999px;
+}
+.site-news-item__date
+{
+    font-size: .8rem;
+
+    text-align: right;
+
+    color: #6f6f6f;
+}
 @media (min-width: 576px)
 {
     .header-logo__title

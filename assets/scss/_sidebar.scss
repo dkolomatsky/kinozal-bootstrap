@@ -48,10 +48,16 @@ $image-size-with-padding: $image-size + 10px;
     width: 100%;
   }
 
-  &__title {}
+  &__title {
+    margin-bottom: $gap-md;
+  }
 
   &__link {}
 
-  &__date {}
+  &__date {
+    font-size: 0.8rem;
+    color: $color-gray-dark;
+    text-align: right;
+  }
 
 }
