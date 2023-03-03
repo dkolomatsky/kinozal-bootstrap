@@ -35,13 +35,39 @@ $image-size: 75px;
 $image-size-with-padding: $image-size + 10px;
 
 .site-news-item {
-  height: $image-size-with-padding;
-  margin-bottom: $gap;
+  position: relative;
+
+  &:not(:last-child) {
+    height: $image-size-with-padding;
+    margin-bottom: $gap;
+
+    &::after {
+      content: "";
+      right: 0;
+      bottom: -4px;
+      width: calc(100% - #{($image-size-with-padding)});
+      height: 1px;
+      position: absolute;
+      background-color: $color-gray;
+    }
+  }
+
+  &:hover {
+    a {
+      color: $color-accent;
+    }
+
+    .thumbnail {
+      background-color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
 
   &__thumbnail {
     float: left;
-    margin-right: $gap-md;
+    margin: 0 $gap-md $gap-md 0;
     width: $image-size;
+
   }
 
   &__image {
@@ -52,7 +78,10 @@ $image-size-with-padding: $image-size + 10px;
     margin-bottom: $gap-md;
   }
 
-  &__link {}
+  &__link {
+    transition: color 0.25s;
+    @include block-shortener(1rem, 1.5, 50px, 2);
+  }
 
   &__date {
     font-size: 0.8rem;

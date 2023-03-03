@@ -94,17 +94,24 @@
     font-size: .875rem;
 }
 
+.thumbnail
+{
+    -webkit-transition: background-color .25s;
+         -o-transition: background-color .25s;
+            transition: background-color .25s;
+}
+
 html
 {
     font-size: 16px;
-
-    overflow-y: scroll;
 }
 
 body
 {
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
+
+    max-width: 100%;
 }
 
 a
@@ -192,15 +199,41 @@ a:focus
 }
 .site-news-item
 {
+    position: relative;
+}
+.site-news-item:not(:last-child)
+{
     height: 85px;
     margin-bottom: 15px;
+}
+.site-news-item:not(:last-child)::after
+{
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+
+    width: calc(100% - 85px);
+    height: 1px;
+
+    content: '';
+
+    background-color: #d5d5d5;
+}
+.site-news-item:hover a
+{
+    color: #df8a13;
+}
+.site-news-item:hover .thumbnail
+{
+    border-color: #df8a13;
+    background-color: #df8a13;
 }
 .site-news-item__thumbnail
 {
     float: left;
 
     width: 75px;
-    margin-right: 9.99999999px;
+    margin: 0 9.99999999px 9.99999999px 0;
 }
 .site-news-item__image
 {
@@ -210,6 +243,23 @@ a:focus
 {
     margin-bottom: 9.99999999px;
 }
+.site-news-item__link
+{
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    display: -webkit-box;
+    overflow: hidden;
+
+    height: 50px;
+
+    -webkit-transition: color .25s;
+         -o-transition: color .25s;
+            transition: color .25s;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
 .site-news-item__date
 {
     font-size: .8rem;
@@ -218,6 +268,12 @@ a:focus
 
     color: #6f6f6f;
 }
+
+.footer
+{
+    margin-top: 80px;
+}
+
 @media (min-width: 576px)
 {
     .header-logo__title
@@ -225,6 +281,7 @@ a:focus
         font-size: 3.5rem;
     }
 }
+
 @media (min-width: 768px)
 {
     .navbar-left > li
@@ -240,6 +297,7 @@ a:focus
         border-radius: 4px;
     }
 }
+
 @media (max-width: 767.8px)
 {
     .navbar-inverse .navbar-nav > li > a
@@ -247,6 +305,7 @@ a:focus
         text-align: center;
     }
 }
+
 @media (max-width: 575.8px)
 {
     .header-logo__title
