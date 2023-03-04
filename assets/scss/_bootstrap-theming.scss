@@ -1,34 +1,36 @@
 @use 'presets' as *;
 @use 'mixins' as *;
 
-.navbar-header {
-  text-align: center;
-}
+.navbar {
+  &-header {
+    text-align: center;
+  }
 
-.navbar-inverse {
-  background-color: $color-deep-dark;
-}
+  &-inverse {
+    background-color: $color-deep-dark;
+  }
 
+  &-left {
+    margin-bottom: 0px;
 
-.navbar-left {
-  margin-bottom: 0px;
+    >li {
+      @include sm-min {
+        padding: 5px 5px 5px 0;
+      }
+    }
+  }
 
-  >li {
-    @include sm-min {
-      padding: 5px 5px 5px 0;
+  &-right {
+    margin-top: 0px;
+
+    >li {
+      @include sm-min {
+        padding: 5px 0 5px 5px;
+      }
     }
   }
 }
 
-.navbar-right {
-  margin-top: 0px;
-
-  >li {
-    @include sm-min {
-      padding: 5px 0 5px 5px;
-    }
-  }
-}
 
 .navbar-inverse .navbar-nav>li>a {
   transition: background-color 0.5s;
@@ -60,6 +62,8 @@
   float: none;
   margin-right: 0;
 }
+
+/*часть sidebar*/
 
 .panel-info {
   background-color: $color-gray-light;
@@ -98,32 +102,4 @@
   transition: background-color 0.25s;
 }
 
-
-/*Блок site-rating
-
-.nav-pills>li {
-  //float: none;
-
-  >a {
-    border-radius: 0;
-  }
-}
-
-.nav-pills>li+li {
-  margin-left: 0;
-}
-
-.badge {
-  position: absolute;
-  right: 15px;
-}
-
-.nav>li>a:focus,
-.nav>li>a:hover {
-  color: $color-white;
-  background-color: $color-accent;
-
-  >.badge {
-    background-color: $color-black;
-  }
-}*/
+/*часть main*/

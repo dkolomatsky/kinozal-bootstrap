@@ -19,13 +19,12 @@
     top: 3px;
     right: $gap-md;
     border: none;
-    //margin-right: -$gap;
 
     a {
       background-color: transparent !important;
       border: none !important;
       color: $color-gray;
-      padding: 10px 5px !important;
+      padding: $gap-md 5px !important;
     }
   }
 }
@@ -93,7 +92,7 @@ $image-size-with-padding: $image-size + 10px;
 
 .site-rating {
   &__body {
-    padding: 10px 0;
+    padding: $gap-md 0;
   }
 
   &__list {
@@ -132,25 +131,9 @@ $image-size-with-padding: $image-size + 10px;
 
   &__badge {
     position: absolute;
-    right: 15px;
+    right: $gap;
     top: 50%;
     transform: translateY(-50%);
   }
 
 }
-
-/*.site-rating__body {
-  padding: 10px 0 !important;
-}
-
-.site-nav__block {
-  width: 100%;
-
-  &:not(:last-child) {
-    border-bottom: 1px solid $color-gray;
-  }
-}
-
-.site-nav__link {
-  display: block;
-}*/
