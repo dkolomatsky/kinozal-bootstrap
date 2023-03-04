@@ -90,3 +90,67 @@ $image-size-with-padding: $image-size + 10px;
   }
 
 }
+
+.site-rating {
+  &__body {
+    padding: 10px 0;
+  }
+
+  &__list {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    background-color: transparent;
+    margin-left: -1px;
+    margin-right: -1px;
+    color: $color-primary !important;
+    padding-right: 55px;
+
+
+    &:first-child {
+      border-top: none;
+      border-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: $color-accent !important;
+      color: $color-white !important;
+      border-color: $color-accent;
+
+      .badge {
+        background-color: $color-dark;
+      }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+/*.site-rating__body {
+  padding: 10px 0 !important;
+}
+
+.site-nav__block {
+  width: 100%;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-gray;
+  }
+}
+
+.site-nav__link {
+  display: block;
+}*/

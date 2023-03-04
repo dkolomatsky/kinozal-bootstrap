@@ -97,3 +97,33 @@
 .thumbnail {
   transition: background-color 0.25s;
 }
+
+
+/*Блок site-rating
+
+.nav-pills>li {
+  //float: none;
+
+  >a {
+    border-radius: 0;
+  }
+}
+
+.nav-pills>li+li {
+  margin-left: 0;
+}
+
+.badge {
+  position: absolute;
+  right: 15px;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+  color: $color-white;
+  background-color: $color-accent;
+
+  >.badge {
+    background-color: $color-black;
+  }
+}*/
