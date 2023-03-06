@@ -1,2 +1,48 @@
 @use 'presets' as *;
 @use 'mixins' as *;
+
+
+
+.new-films {
+  &-item {
+    padding-left: $gap-sm;
+    padding-right: $gap-sm;
+    margin-bottom: $gap;
+
+    &__thumbnail {
+      margin-bottom: 0;
+    }
+
+    &__image {
+      min-width: 100%
+    }
+
+    &__title {
+      @include text-shortener;
+    }
+
+    &__caption {}
+  }
+}
+
+.top-films {
+  &-item {
+    padding-left: $gap-sm;
+    padding-right: $gap-sm;
+    margin-bottom: $gap;
+
+    &__thumbnail {
+      margin-bottom: 0;
+    }
+
+    &__image {
+      min-width: 100%
+    }
+
+    &__title {
+      @include text-shortener;
+    }
+
+    &__caption {}
+  }
+}
