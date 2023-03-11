@@ -7,6 +7,26 @@
     text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
 }
 
+.new-films,
+.top-films,
+.cinema-news
+{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.new-films-item__title,
+.top-films-item__title
+{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+    margin: 0;
+
+    text-align: center;
+}
+
 .navbar-header
 {
     text-align: center;
@@ -161,6 +181,38 @@ a:focus
     color: #fff;
 }
 
+.main
+{
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.new-films-title
+{
+    font-family: 'PT Serif', serif;
+    font-size: 3rem;
+    font-weight: 400;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: -9.99999999px;
+    margin-right: -7.5px;
+    margin-bottom: 48px;
+    margin-left: -7.5px;
+}
+.new-films-title::after
+{
+    position: absolute;
+
+    width: 100%;
+    margin: 41px 0 0 15px;
+
+    content: '';
+
+    border-bottom: 3px solid #f0ad4f;
+}
 .new-films-item
 {
     margin-bottom: 15px;
@@ -184,6 +236,47 @@ a:focus
        text-overflow: ellipsis;
 
     -o-text-overflow: ellipsis;
+}
+
+.top-films
+{
+    position: relative;
+}
+.top-films::before
+{
+    position: absolute;
+
+    width: 30px;
+    margin: 10px 15px 0 0;
+
+    content: '';
+
+    border-bottom: 3px solid #f0ad4f;
+}
+.top-films-title
+{
+    font-family: 'PT Serif', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 65px;
+    margin-bottom: 48px;
+    margin-left: 45px;
+}
+.top-films-title::after
+{
+    position: absolute;
+
+    width: 100%;
+    margin: 35px 0 0 15px;
+
+    content: '';
+
+    border-bottom: 3px solid #f0ad4f;
 }
 .top-films-item
 {
@@ -209,6 +302,7 @@ a:focus
 
     -o-text-overflow: ellipsis;
 }
+
 .vertical-carousel
 {
     overflow: hidden;

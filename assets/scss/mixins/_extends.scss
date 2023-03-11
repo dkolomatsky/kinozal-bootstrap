@@ -5,3 +5,16 @@
   display: block;
   text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000;
 }
+
+%section-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+%film-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: $font-main;
+  text-align: center;
+}

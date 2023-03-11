@@ -2,8 +2,34 @@
 @use 'mixins' as *;
 
 
+.main {
+  padding-left: 12px;
+  padding-right: 12px;
+}
 
 .new-films {
+  @extend %section-padding;
+
+  &-title {
+    position: relative;
+    overflow: hidden;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: $font-header;
+    margin-left: - $gap-sm;
+    margin-right: - $gap-sm;
+    margin-bottom: 48px;
+    margin-top: -$gap-md;
+
+    &::after {
+      content: "";
+      border-bottom: 3px solid $color-accent-light;
+      position: absolute;
+      margin: 41px 0 0 $gap;
+      width: 100%;
+    }
+  }
+
   &-item {
     padding-left: $gap-sm;
     padding-right: $gap-sm;
@@ -19,13 +45,42 @@
 
     &__title {
       @include text-shortener;
+      @extend %film-title
     }
-
-    &__caption {}
   }
 }
 
 .top-films {
+  @extend %section-padding;
+  position: relative;
+
+  &::before {
+    margin: 10px $gap 0 0;
+    content: "";
+    border-bottom: 3px solid $color-accent-light;
+    position: absolute;
+    width: 30px;
+  }
+
+  &-title {
+    position: relative;
+    overflow: hidden;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: $font-header;
+    margin-top: 65px;
+    margin-bottom: 48px;
+    margin-left: 45px;
+
+    &::after {
+      content: "";
+      border-bottom: 3px solid $color-accent-light;
+      position: absolute;
+      margin: 35px 0 0 $gap;
+      width: 100%;
+    }
+  }
+
   &-item {
     padding-left: $gap-sm;
     padding-right: $gap-sm;
@@ -41,8 +96,11 @@
 
     &__title {
       @include text-shortener;
+      @extend %film-title
     }
-
-    &__caption {}
   }
+}
+
+.cinema-news {
+  @extend %section-padding;
 }
